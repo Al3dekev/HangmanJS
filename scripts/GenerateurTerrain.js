@@ -5,13 +5,16 @@ let RegistreDuMot = {
     "MotDecoupe": []
 };
 const ClavierDeLettres = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
-const NumeroStageActuel = 0; // Sert a savoir le niveau de pendaison
+let NumeroStageActuel = 0; // Sert a savoir le niveau de pendaison
 
 /***
  * Permet de generer le mot qui servira au jeu parmi une liste pre-etablie.
  */
 function genererMot(){
-    const ListeDesMotsDujeu = ["Parlement", "Reduit", "Tomber", "Revolution", "Sectorisation", "Origine", "Assurance", "Bataille", "Telephone", "Manger"];
+    const ListeDesMotsDujeu = ["Parlement", "Reduit", "Confinement", "Revolution", "Sectorisation", "Origine", "Assurance", "Bataille", "Telephone", "Mangue"];
+    for (i in ListeDesMotsDujeu){
+        ListeDesMotsDujeu[i] = ListeDesMotsDujeu[i].toUpperCase();
+    }
     const ChoisirUnMot = ListeDesMotsDujeu[Math.floor(Math.random() * ListeDesMotsDujeu.length)];
 
     RegistreDuMot.Mot = ChoisirUnMot;
@@ -26,7 +29,7 @@ function genererMot(){
         cpt++
     }
 
-    const BaliseZone = document.querySelector(".ZoneInteraction .InterMotADeviner .Mot")
+    const BaliseZone = document.querySelector(".ZoneInteraction .InterMotADeviner .Mot");
 
     RegistreDuMot.MotDecoupe.forEach(Lettre =>{
         let BaliseLettre = document.createElement("div");
@@ -39,6 +42,9 @@ function genererMot(){
 
 }
 
+/***
+ * Permet de générer dynamiquement le clavier, au cas ou l'on souhaite mettre un clavier espagnol ou russe facilement par exemple.
+ */
 function genererClavier(){
 
     const ClavierHTML = document.querySelector(".ClavierDeLettres");

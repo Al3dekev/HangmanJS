@@ -55,7 +55,7 @@ function VerifierLettre(event){
 function BonnePioche(TypeDeSaisie, InputSiLettre){ // "Lettre" ou "Mot"
     if (TypeDeSaisie === "Lettre"){
         RegistreDuMot.MotDecoupe.forEach(LettreDuMot =>{
-            if (LettreDuMot.EstDecouverte && LettreDuMot.Lettre !== null){
+            if (LettreDuMot.EstDecouverte){
                 let HiddenLetter = document.querySelector(".InterMotADeviner .Mot .\\3" + LettreDuMot.Class[0] + (LettreDuMot.Class[1] === undefined ? "" : " " + LettreDuMot.Class[1]));
                 HiddenLetter.innerHTML = LettreDuMot.Lettre;
                 DesactiverLettre(InputSiLettre, "green");

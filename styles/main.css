@@ -82,3 +82,25 @@
     align-items: center ;
     align-content: center ;
 }
+
+
+.regles{
+    display: flex ;
+    flex-direction: column ;
+    flex-wrap: wrap ;
+    justify-content: flex-start ;
+    align-items: center ;
+    align-content: center ;
+    margin-top: 50px;
+}
+
+.regles div, .regles .TitreRegle{
+    width: 100%;
+}
+
+.regles .TitreRegle{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: 900;
+}

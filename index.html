@@ -10,10 +10,23 @@
 
     <div class="ZoneDeJeu">
         <div class="ZonePendu">
-
+            <!-- Changer source image via JS -->
+            <img src="assets/Stage%200.png" alt="Hangman">
         </div>
         <div class="ZoneInteraction">
-
+            <div class="InterMotADeviner">
+                <div class="Mot">
+                    <!-- Liste des lettres du mot a deviner dynamiquement ajoutées ici -->
+                </div>
+            </div>
+            <div class="InterChampSaisie">
+                <input type="text" disabled>
+            </div>
+            <div class="InterClavier">
+                <div class="ClavierDeLettres">
+                    <!-- Lettres ajoutées en dynamique -->
+                </div>
+            </div>
         </div>
     </div>
 
@@ -21,8 +34,8 @@
 
     </div>
 
-
-    <script src="scripts/Hangman.js"></script>
+    <script src="scripts/GenerateurTerrain.js"></script>
+    <script src="scripts/GenerateurJeu.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>

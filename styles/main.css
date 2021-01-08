@@ -1,0 +1,87 @@
+.ZoneDeJeu{
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    justify-content: space-around ;
+    align-items: center ;
+    align-content: center ;
+}
+
+.ZonePendu{
+    background-color: red;
+}
+
+.ZoneInteraction{
+    width: 500px;
+    background-color: antiquewhite;
+    display: flex ;
+    flex-direction: column ;
+    flex-wrap: wrap ;
+    justify-content: space-around ;
+    align-items: center ;
+    align-content: center ;
+}
+
+.regles{
+    background-color: darkgrey;
+}
+
+.ClavierDeLettres{
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    justify-content: space-around ;
+    align-items: center ;
+    align-content: center ;
+    width:75%;
+}
+
+.LettreClavier{
+    /*background-color: aquamarine;*/
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid gray;
+    font-weight: 900;
+    font-size: 25px;
+    font-family: "Arial";
+    margin: 7px 7px;
+}
+.ZoneInteraction .InterMotADeviner{
+
+
+}
+
+.InterMotADeviner .Mot{
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    justify-content: center ;
+    align-items: center ;
+    align-content: center ;
+}
+
+.InterMotADeviner .Mot .Lettre{
+    Margin: 0px 5px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.InterChampSaisie, .InterMotADeviner, .InterClavier{
+    width: 100%;
+    margin: 15px 0px;
+    text-align: center;
+}
+
+
+
+.ZoneInteraction .InterClavier{
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    justify-content: space-around ;
+    align-items: center ;
+    align-content: center ;
+}

@@ -17,6 +17,11 @@ export class Letter {
         });
     }
 
+    public reset(): void {
+        this.selected = false;
+        this.valid = false;
+    }
+
     private set selected(value: boolean) {
         this.internalSelected = value;
 

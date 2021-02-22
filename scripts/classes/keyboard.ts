@@ -15,12 +15,10 @@ export class Keyboard {
         }
     }
 
-    public updateWordContainerLetters(): void {
-
-    }
-
-    public clear(): void {
-
+    public reset(): void {
+        for (const letter of this.letters) {
+            letter.reset();
+        }
     }
 
     public pressLetter(letter: string): boolean {

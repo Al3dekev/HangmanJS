@@ -15,10 +15,19 @@ export class Counter {
 
     public doIncrement(): void {
         this.counter++;
-        this.$counter.innerText = this.counter.toString();
+        this.updateDisplay();
     }
 
     public isFinished(): boolean {
         return this.counter >= this.maxCounter;
+    }
+
+    public reset(): void {
+        this.counter = 0;
+        this.updateDisplay();
+    }
+
+    private updateDisplay(): void {
+        this.$counter.innerText = this.counter.toString();
     }
 }

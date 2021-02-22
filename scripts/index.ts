@@ -4,4 +4,5 @@ const engine = new Engine(
     document.querySelector('#letter-buttons-container'),
     document.querySelector('#word-container'),
     document.querySelector('#error-counter-display'),
+    document.querySelector("#word-try")
 );

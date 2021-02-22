@@ -46,15 +46,15 @@ avec un double tilde `~`.
 
 - Affichage du pendu :
     1. Dessiner un « vrai » pendu qui s'affiche complètement au fur et à mesure de la partie (cf. mockup main-screen).
-    2. ~~Afficher un compteur de raté (cf. mockup light-screen).~~
-    3. ~~Création graphique.~~
+    2. Afficher un compteur de raté (cf. mockup light-screen).
+    3. Création graphique.
 
 - Respecter les mockups :
     1. Respect strict.
-    2. ~~Création graphique.~~
+    2. Création graphique.
 
 - Responsive :
-    1. ~~Oui~~
+    1. Oui
     2. Non
 
 ## Mockups

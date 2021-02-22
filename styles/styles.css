@@ -1,0 +1,19 @@
+.word-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.letter {
+    min-width: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #666;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.score {
+    font-size: 3em;
+    font-weight: bold;
+}

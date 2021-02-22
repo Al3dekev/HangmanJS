@@ -2,47 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hangman</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <h1 class="navbar-brand">Hangman</h1>
+    </div>
+</nav>
 
-    <div class="ZoneDeJeu">
-        <div class="ZonePendu">
-            <!-- Changer source image via JS -->
-            <img class="ImagePendu" src="assets/Stage%200.png" alt="Hangman">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <span class="score">
+                <span id="error-counter-display" class="text-danger">0</span> / 10
+            </span>
         </div>
-        <div class="ZoneInteraction">
-            <div class="InterMotADeviner">
-                <div class="Mot">
-                    <!-- Liste des lettres du mot a deviner dynamiquement ajoutées ici -->
-                </div>
+
+        <div class="col-md-6">
+            <div id="word-container" class="word-container mt-4 mb-4">
+                <!--                <span class="letter">A</span>-->
+                <!--                <span class="letter">B</span>-->
+                <!--                <span class="letter">C</span>-->
+                <!--                <span class="letter">D</span>-->
             </div>
-            <div class="InterChampSaisie">
-                <input type="text" class="MotEntier" placeholder="Deviner le mot entier...">
+
+            <div class="mt-4 mb-4">
+                <input type="text" class="form-control" id="word-try">
             </div>
-            <div class="InterClavier">
-                <div class="ClavierDeLettres">
-                    <!-- Lettres ajoutées en dynamique -->
+
+            <div id="letter-buttons-container" class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <button type="button" class="m-2 btn btn-light" data-letter="A">A</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="B">B</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="C">C</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="D">D</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="E">E</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="F">F</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="G">G</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="H">H</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="I">I</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="J">J</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="K">K</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="L">L</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="M">M</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="N">N</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="O">O</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="P">P</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="Q">Q</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="R">R</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="S">S</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="T">T</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="U">U</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="V">V</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="W">W</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="X">X</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="Y">Y</button>
+                    <button type="button" class="m-2 btn btn-light" data-letter="Z">Z</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="regles">
-        <div class="TitreRegle">Les Règles:</div>
-        <div>1. La partie est automatiquement démarré au chargement de la page.</div>
-        <div>2. Le jeu choisit aléatoirement le mot à trouver parmis une liste que vous aurez créé.</div>
-        <div>3. Le jeu doit afficher le nombre de lettres du mot sous forme d'espace à remplir (cf. mockups).</div>
-        <div>4. Le joueur doit deviner le mot.</div>
-        <div>5. Il peut choisir une lettre, si cette lettre est présente dans le mot, elle est ajouté sur les espaces correspondants.</div>
-        <div>6. Si la lettre n'existe pas, il perd un essai.</div>
-        <div>7. Après 10 essais ratés, le joueur a perdu la partie.</div>
-    </div>
+    <div class="mt-4">
+        <h2>
+            Rules
+        </h2>
 
-    <script src="scripts/GenerateurTerrain.js"></script>
-    <script src="scripts/GenerateurJeu.js"></script>
-    <script src="scripts/index.js"></script>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eius et fugiat incidunt laudantium quasi
+            recusandae. Alias aliquid commodi consequatur deleniti eaque et iure laboriosam maiores ratione reiciendis.
+            Minima, soluta!
+        </p>
+        <p>Architecto at dolor doloremque error fuga hic nam nostrum repellat. Aut deserunt dolorum facilis ipsum
+            quos, sequi voluptatum. Ab aliquid, deleniti eligendi iure laborum nostrum repudiandae tempora! Laborum,
+            nam, sed.
+        </p>
+        <p>Alias dicta distinctio esse in itaque laborum porro ut voluptatibus. Accusamus architecto dolor dolorem
+            eius error fuga illum incidunt labore laboriosam, nobis quibusdam recusandae, sint totam unde vitae. Nisi,
+            suscipit.
+        </p>
+    </div>
+</div>
+
+<script src="dist/scripts.js"></script>
+
 </body>
 </html>

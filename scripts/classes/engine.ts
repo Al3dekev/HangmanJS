@@ -11,8 +11,9 @@ export class Engine {
     constructor(
         $keyboardElement: HTMLElement,
         $wordElement: HTMLElement,
+        $counterElement: HTMLElement,
     ) {
-        this.counter = new Counter();
+        this.counter = new Counter($counterElement);
         this.keyboard = new Keyboard($keyboardElement, this);
         this.manager = new WordManager($wordElement, this);
     }
@@ -31,6 +32,7 @@ export class Engine {
             return true;
         }
 
+        this.counter.doIncrement();
         return false;
     }
 }
